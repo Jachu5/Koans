@@ -19,10 +19,7 @@ fun todoTask2_1() = TODO(
     references = { name: String -> JavaCode2().foo(name); foo(name) })
 
 fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false ): String{
-    if(toUpperCase)
-       return name.toUpperCase() + number
-    else
-       return  name + number
+    return if (toUpperCase) name.toUpperCase() + number else name + number
 }
 
 fun task2_1(): String {
