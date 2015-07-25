@@ -28,5 +28,20 @@ fun todoTask1(collection: Collection<Int>) = TODO(
 
 
 fun task1(collection: Collection<Int>): String {
+    val sb = StringBuilder()
+    sb.append("{")
+    val it = collection.iterator()
+    while (it.hasNext()){
+        val element = it.next()
+        sb.append(element)
+        if(it.hasNext()){
+            sb.append(", ")
+        }
+    }
+    sb.append("}")
+    return sb.toString()
+}
+
+fun task11(collection: Collection<Int>): String {
     todoTask1(collection)
 }

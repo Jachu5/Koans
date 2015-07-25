@@ -1,5 +1,6 @@
 package i_introduction._0_Hello_World.Hello
 
+import i_introduction._1_Functions.task1
 import util.TODO
 
 //compiles to a static function in a class HelloPackage
@@ -22,6 +23,7 @@ fun todoTask0() = TODO(
         To start please make the function 'task0' returns "OK" =).
     """,
     references = { task0(); "OK" }
+
 )
 
 fun task0(): String {
