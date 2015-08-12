@@ -36,7 +36,8 @@ fun todoTask3(collection: Collection<Int>) = TODO(
     references = { JavaCode3().task3(collection) })
 
 fun task3(collection: Collection<Int>): Boolean {
-    return collection.any {  it % 42 == 0 }
+
+    return collection.map({  x -> x % 42 == 0 }).contains(true)
 }
 
 
