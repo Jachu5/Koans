@@ -2,7 +2,7 @@ out
 workspace.xml
 keys
 results.txt
-.idea/
+.idea
 *.iws
 *.ipr
 *.iml
