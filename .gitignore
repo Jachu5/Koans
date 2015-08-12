@@ -3,3 +3,6 @@ workspace.xml
 keys
 results.txt
 .idea/
+*.iws
+*.ipr
+*.iml
