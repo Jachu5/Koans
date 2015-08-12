@@ -37,7 +37,7 @@ fun todoTask3(collection: Collection<Int>) = TODO(
 
 fun task3(collection: Collection<Int>): Boolean {
 
-    return collection.map({  x -> x % 42 == 0 }).contains(true)
+    return collection.map({x -> x % 42 == 0}).contains(true)
 }
 
 
