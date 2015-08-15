@@ -15,7 +15,7 @@ class _05_Nullable_Types {
             public override fun sendMessage(actualEmail: String, actualMessage: String) {
                 invoked = true
                 Assert.assertEquals("The message is not as expected:",
-                        message, actualMessage)
+                            message, actualMessage)
                 Assert.assertEquals("The email is not as expected:",
                         email, actualEmail)
             }

@@ -52,19 +52,25 @@ fun struggleAgainstNPE() {
 
 fun fail() = throw Exception()
 
-fun todoTask5(client: Client?, message: String?, mailer: Mailer) = TODO(
-    """
-        Task 5.
-        Rewrite JavaCode5.sendMessageToClient to kotlin (using only one 'if').
-        Declarations of Client, PersonalInfo and Mailer are given below.
-    """,
-    references = { JavaCode5().sendMessageToClient(client, message, mailer) }
-)
+fun todoTask5(client: Client?, message: String?, mailer: Mailer) = {
 
-fun sendMessageToClient(
-        client: Client?, message: String?, mailer: Mailer
-) {
-    todoTask5(client, message, mailer)
+}
+
+
+fun sendMessageToClient(client: Client?, message: String?, mailer: Mailer) {
+
+    val personalInfo =  client?.personalInfo
+    val email = personalInfo?.email
+
+
+    //(email != null && message != null) ?: mailer.sendMessage(email,message)
+    // This is not valid, expected String not String?, sentence below allows
+    // it since null checking in
+    // the if statement guarantee the String
+
+    if (email != null && message != null) {
+        mailer.sendMessage(email, message)
+    }
 }
 
 class Client (val personalInfo: PersonalInfo?)
