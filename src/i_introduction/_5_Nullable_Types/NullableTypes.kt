@@ -52,12 +52,7 @@ fun struggleAgainstNPE() {
 
 fun fail() = throw Exception()
 
-fun todoTask5(client: Client?, message: String?, mailer: Mailer) = {
-
-}
-
-
-fun sendMessageToClient(client: Client?, message: String?, mailer: Mailer) {
+fun todoTask5(client: Client?, message: String?, mailer: Mailer) {
 
     val personalInfo =  client?.personalInfo
     val email = personalInfo?.email
@@ -71,6 +66,12 @@ fun sendMessageToClient(client: Client?, message: String?, mailer: Mailer) {
     if (email != null && message != null) {
         mailer.sendMessage(email, message)
     }
+
+}
+
+
+fun sendMessageToClient(client: Client?, message: String?, mailer: Mailer) {
+    todoTask5(client,message,mailer)
 }
 
 class Client (val personalInfo: PersonalInfo?)
