@@ -26,13 +26,11 @@ fun example() = Pattern.compile(getPatternInTQString()).matcher("Douglas Adams (
 
 val month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
 
-fun todoTask4() = TODO(
-    """
-        Task 4.
-        Copy the body of 'getPatternInTQString()' to 'task4()' function
-        and rewrite it in such a way that it matches 'Douglas Adams (11 MAR 1952)'.
-        Use the 'month' variable.
-    """,
-    references = { getPatternInTQString(); month })
+fun todoTask4() = """(\w*) (\w*) \((\d{2}) ${month} (\d{4})\)"""
+
+
+
+//'Douglas Adams (11 MAR 1952)'
+
 
 fun task4(): String = todoTask4()
