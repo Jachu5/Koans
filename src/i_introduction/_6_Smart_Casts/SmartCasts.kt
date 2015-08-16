@@ -25,13 +25,17 @@ fun evalWhen(e: Expr): Int =
             else -> throw IllegalArgumentException("Unknown expression")
         }
 
-fun todoTask6(expr: Expr) = TODO(
-    """
-        Task 6.
-        Rewrite 'JavaCode6.print()' to Kotlin using 'when'.
-        The other examples of 'when' syntax can be found in syntax/ifWhenExpressions.kt
-    """,
-    references = { JavaCode6().print(expr); syntax.ifWhenExpressions.whenWithoutArgument(42) })
+fun print(expr: Expr): String {
+    when (expr) {
+        is Num -> return "" + expr.value.toString()
+        is Sum -> return print(expr.left) + " + " + print(expr.right)
+        else -> throw IllegalArgumentException("Unknown expression")
+    }
+}
 
-fun print(expr: Expr): String = todoTask6(expr)
+fun todoTask6(expr: Expr) {
+
+
+}
+
 
