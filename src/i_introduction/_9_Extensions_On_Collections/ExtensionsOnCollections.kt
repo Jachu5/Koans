@@ -42,20 +42,12 @@ fun main(args: Array<String>) {
     operationsWithMaps()
 }
 
-fun todoTask9() = TODO(
-    """
-        Task 9.
-        The function should do the same as 'JavaCode9.doSomethingStrangeWithCollection'
-        Replace all invocations of 'todoTask9()' with the appropriate code.
-    """,
-    references = { c: Collection<String> -> JavaCode9().doSomethingStrangeWithCollection(c) }
-)
-
 fun doSomethingStrangeWithCollection(collection: Collection<String>): Collection<String>? {
-    val groupsByLength = collection. groupBy { s -> todoTask9() }
+    val groupsByLength = collection. groupBy { s -> s.length() }
 
-    val maximumSizeOfGroup = groupsByLength. values(). map { group -> todoTask9() }. max()
+    val maximumSizeOfGroup = groupsByLength.values()
+            .map { group -> group.size() }. max()
 
-    return groupsByLength. values(). firstOrNull { group -> todoTask9() }
+    return groupsByLength. values(). firstOrNull { group -> group.size() == maximumSizeOfGroup}
 }
 
