@@ -11,6 +11,7 @@ fun String.lastChar1() = charAt(length() - 1)
 fun use() {
     // Try Ctrl+Space after the dot: lastChar() visible in completion and can be easily found
     "abc".lastChar()
+
 }
 
 // 'lastChar' compiles to a static function in the class StringExtensionsPackage
@@ -27,7 +28,6 @@ fun todoTask8() = TODO(
 
 data class RationalNumber(val numerator: Int, val denominator: Int)
 
-fun Int.r(): RationalNumber = todoTask8()
-fun Pair<Int, Int>.r(): RationalNumber = todoTask8()
-
+fun Int.r(): RationalNumber = RationalNumber(this,1)
+fun Pair<Int, Int>.r(): RationalNumber = RationalNumber(this.first,this.second)
 
